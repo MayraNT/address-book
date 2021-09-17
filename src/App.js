@@ -1,11 +1,40 @@
+import React, { Component } from 'react';
+import Users from '../src/components/Users';
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Hello World</h1>
-    </div>
-  );
+const URL = 'https://randomuser.me/api?results=25';
+
+class App extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      users: []
+    }
+  }
+
+  async componentDidMount() {
+    let res = await fetch(URL);
+    let json = await res.json();
+    let { results } = json;
+
+    this.setState({
+      users: results
+    });
+  }
+
+  // componentDidUpdate() {
+  //   console.log('Updated', this.state.users)
+  // }
+
+  render() {
+    return (
+      <div className="App">
+        <Users people={this.state.users} />
+      </div>
+    );  
+  }
 }
 
 export default App;
