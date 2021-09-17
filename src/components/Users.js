@@ -1,10 +1,11 @@
 import React from 'react';
+import User from './User'
 
-function Users(props) {
+function Users({ people }) {
   return (
     <ul>
-      {props.people.map((person) => (
-        <li key={person.email}>{person.name.first} {person.name.last}</li>
+      {people.map((person, index) => (
+        <User person={person} key={index} />
       ))}
     </ul>
   )

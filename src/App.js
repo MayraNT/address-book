@@ -24,9 +24,9 @@ class App extends Component {
     });
   }
 
-  // componentDidUpdate() {
-  //   console.log('Updated', this.state.users)
-  // }
+  componentDidUpdate() {
+    console.log('Updated', this.state.users)
+  }
 
   render() {
     return (
