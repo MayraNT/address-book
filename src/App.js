@@ -31,6 +31,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <p><span className="page-title">Address Book</span> <br/> Click the button under a user's name to see their details.</p>
         <Users people={this.state.users} />
       </div>
     );  

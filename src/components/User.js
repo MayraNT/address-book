@@ -5,7 +5,7 @@ function User(props) {
     email, 
     gender,
     cell, 
-    picture: { thumbnail }, 
+    picture: { medium }, 
     name: { first, last },  
     dob: { age }, 
     location: { state, country }
@@ -20,15 +20,16 @@ function User(props) {
 
   return (
     <li key={email}>
-      <img src={thumbnail} alt={first} />
+      <img src={medium} alt={first} />
       <h3>{first} {last}</h3>
       <button onClick={() => handleDetails()}>{isHidden ? "Show Details" : "Hide Details"}</button>
-      {!isHidden && 
-        <div className="user-details">
-          {gender}, {age}<br/>
-          {state}, {country}<br/>
-          email: {email}<br/>
-          cell: {cell}
+      {
+        !isHidden && 
+        <div>
+          <i class="fas fa-user"></i> {gender}, {age}<br/>
+          <i class="fas fa-map-pin"></i> {state}, {country}<br/>
+          <i class="fas fa-envelope"></i> {email}<br/>
+          <i class="fas fa-phone-alt"></i> {cell}
         </div>
       }
     </li>
