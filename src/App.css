@@ -32,7 +32,6 @@ li {
   list-style-type: none;
   width: 260px;
   height: 275px;
-  /* border: 1px solid black; */
   border-radius: 5px;
   background-color: white;
   display: flex;
@@ -43,9 +42,7 @@ li {
 }
 
 img {
-  /* border-radius: 5px; */
   border-radius: 50%;
-  /* border: 1px solid rgb(92, 124, 119); */
   box-shadow: 2px 2px 5px gray;
 }
 
@@ -60,12 +57,15 @@ button {
   font-family: 'Nunito Sans', sans-serif;
   font-weight: bold;
   box-shadow: 1px 1px 5px gray;
+  transition: box-shadow .3s, background-color .2s, color .2s;
 }
 
 button:hover {
   box-shadow: none;
+  background-color: rgb(152, 192, 185);
+  color: white;
 }
-
+ 
 i {
   color: rgb(177, 194, 191);
 }

@@ -22,7 +22,7 @@ function User(props) {
     <li key={email}>
       <img src={medium} alt={first} />
       <h3>{first} {last}</h3>
-      <button onClick={() => handleDetails()}>{isHidden ? "Show Details" : "Hide Details"}</button>
+      <button className="detailsBtn" onClick={() => handleDetails()}>{isHidden ? "Show Details" : "Hide Details"}</button>
       {
         !isHidden && 
         <div>
